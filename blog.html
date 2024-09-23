@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/52e149d1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Blog</title>
+  </head>
+
+  <body style="font-family: 'Lexend'">
+    <header class="bg-[#F9F7F3]">
+      <div class="mx-auto pt-5 pb-12 container flex justify-between">
+        <div class="">
+          <a href="index.html"
+            ><button class="btn bg-[#B4F461] text-xl">Home</button></a
+          >
+        </div>
+        <div class="">
+          <h2 class="text-xl">
+            <img src="assets/logo.png" alt="" class="inline-block" />
+            Donate Bangladesh
+          </h2>
+        </div>
+        <div class="">
+          <h2 class="text-xl">
+            <img src="assets/coin.png" alt="" class="inline-block" />&nbsp;
+            <span>5500</span> BDT
+          </h2>
+        </div>
+      </div>
+    </header>
+
+    <section class="container mx-auto my-24 border-2 p-5 rounded-lg">
+      <p class="font-bold text-2xl mb-6">
+        Important Questions
+        <i class="fa-regular fa-circle-question fa-bounce"></i>
+      </p>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            The Document Object Model (DOM) is a programming interface for web
+            documents, particularly HTML. It defines the structure of a webpage
+            as a tree of objects, where each tag (such as paragraphs, headers,
+            and anchors) is represented as a node in this tree. The DOM allows
+            developers to access, modify, add, or delete elements dynamically
+            using scripting languages like JavaScript.<br /><br />
+            Through the DOM, developers can manipulate the content, structure,
+            and style of a webpage without needing to reload the entire page. It
+            provides methods to traverse the node tree, making web pages more
+            interactive. The DOM is essential for modern web development,
+            enabling dynamic updates, event handling, and interaction with user
+            inputs.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            To select an element from the DOM, you use specific JavaScript
+            methods designed for different scenarios. For instance, you can
+            select an element by its unique ID, where only one element with that
+            ID exists on the page. Alternatively, you can select elements by
+            their class name or tag name, which may return multiple elements.
+            Another approach is to use CSS-like selectors, where you can target
+            an element based on various criteria like its class, tag, or even
+            its position in the DOM. Depending on the method, you may get a
+            single element or a list of elements. These tools are essential for
+            interacting with and manipulating the structure and content of a
+            webpage.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            Event delegation in the context of the DOM is a technique where a
+            single event listener is attached to a parent element rather than
+            multiple listeners to individual child elements. When an event (like
+            a click) occurs on a child element, it bubbles up to the parent,
+            allowing the parent to handle the event for all its children.<br /><br />
+
+            This approach is useful because it improves performance and
+            efficiency. Instead of adding separate event listeners to each child
+            element (which can be resource-intensive, especially for large lists
+            or dynamic content), you only need one listener on the parent. It
+            also simplifies code and ensures that even dynamically added child
+            elements will be handled without needing new event listeners.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            To manipulate an element's attributes and styles using the DOM, you
+            can access and modify the element's properties. For attributes, you
+            can set or get values like <em>src</em>, <em>href</em>, or
+            <em>alt</em> by targeting the specific element and modifying its
+            attribute directly. For example, you can change the source of an
+            image or the URL of a link.<br /><br />
+
+            For styles, you can access an element's <em>style</em> property and
+            assign CSS values directly, such as changing the color, size, or
+            visibility of an element. You can also add or remove CSS classes to
+            control multiple style changes at once. This approach allows dynamic
+            updates to the appearance and behavior of a webpage without
+            reloading it, enhancing interactivity and user experience.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
