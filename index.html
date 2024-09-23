@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Donation</title>
   </head>
-  
+
   <body style="font-family: 'Lexend'">
     <!-- Navbar -->
     <header class="bg-[#F9F7F3]">
@@ -36,27 +36,37 @@
         <div class="">
           <h2 class="text-xl">
             <img src="assets/coin.png" alt="" class="inline-block" />&nbsp;
-            <span>5500</span> BDT
+            <span id="total-amount">5500</span> BDT
           </h2>
         </div>
       </div>
     </header>
 
     <!-- Main Section -->
-    <main class="mt-24 container mx-auto">
+    <main class="my-24 container mx-auto">
       <div class="flex justify-center gap-4">
-        <button class="btn bg-[#B4F461] text-lg">Donation</button>
-        <button class="btn bg-[#B4F461] text-lg">History</button>
+        <button
+          id="donation-button"
+          class="px-5 py-3 bg-[#B4F461] text-lg rounded-xl border-2"
+        >
+          Donation
+        </button>
+        <button
+          id="history-button"
+          class="px-5 py-3 text-lg rounded-xl border-2"
+        >
+          History
+        </button>
       </div>
 
       <!-- Cards -->
-      <div>
+      <div id="donation-part">
         <!-- Card 1 -->
         <div class="border-2 p-6 m-12 rounded-lg grid grid-cols-2 gap-4">
           <img src="assets/noakhali.png" alt="" />
           <div>
             <button class="btn text-lg font-semibold">
-              <img src="assets/coin.png" alt="" /><span>0</span> BDT
+              <img src="assets/coin.png" alt="" /><span id="noakhali-got">0</span> BDT
             </button>
             <h3 class="font-bold text-lg my-5">
               Donate for Flood at Noakhali, Bangladesh
@@ -70,11 +80,17 @@
               lives of those in need.
             </p>
             <input
+              id="noakhali-amount"
               type="text"
               class="w-full border-2 rounded-lg px-5 py-3 my-5"
               placeholder="Write Donation Amount"
             />
-            <button class="btn bg-[#B4F461] w-full text-lg">Donate Now!</button>
+            <button
+              id="noakhali-submit"
+              class="btn bg-[#B4F461] w-full text-lg"
+            >
+              Donate Now!
+            </button>
           </div>
         </div>
 
@@ -83,7 +99,7 @@
           <img src="assets/feni.png" alt="" />
           <div>
             <button class="btn text-lg font-semibold">
-              <img src="assets/coin.png" alt="" /><span>600</span> BDT
+              <img src="assets/coin.png" alt="" /><span id="feni-got">600</span> BDT
             </button>
             <h3 class="font-bold text-lg my-5">
               Donate for Flood Relief in Feni, Bangladesh
@@ -99,11 +115,14 @@
               urgent need.
             </p>
             <input
+              id="feni-amount"
               type="text"
               class="w-full border-2 rounded-lg px-5 py-3 my-5"
               placeholder="Write Donation Amount"
             />
-            <button class="btn bg-[#B4F461] w-full text-lg">Donate Now!</button>
+            <button id="feni-submit" class="btn bg-[#B4F461] w-full text-lg">
+              Donate Now!
+            </button>
           </div>
         </div>
 
@@ -112,7 +131,7 @@
           <img src="assets/quota-protest.png" alt="" />
           <div>
             <button class="btn text-lg font-semibold">
-              <img src="assets/coin.png" alt="" /><span>2400</span> BDT
+              <img src="assets/coin.png" alt="" /><span id="quota-got">2400</span> BDT
             </button>
             <h3 class="font-bold text-lg my-5">
               Aid for Injured in the Quota Movement
@@ -129,16 +148,29 @@
               their time of need.
             </p>
             <input
+              id="quota-amount"
               type="text"
               class="w-full border-2 rounded-lg px-5 py-3 my-5"
               placeholder="Write Donation Amount"
             />
-            <button class="btn bg-[#B4F461] w-full text-lg">Donate Now!</button>
+            <button id="quota-submit" class="btn bg-[#B4F461] w-full text-lg">
+              Donate Now!
+            </button>
           </div>
         </div>
       </div>
+
+      <!-- History Section -->
+      <ul id="history-part" class="hidden m-12"></ul>
     </main>
 
     <footer class="bg-[#F9F7F3] h-24"></footer>
+    <script src="js/utilities.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>
+
+<!-- <li class="border-2 rounded-lg px-6 py-4">
+          <p class="font-bold mb-3">100 Taka is donated for Flood Relief in Feni, Bangladesh<br /></p>
+          <p class="font-light">Date: Today</p>
+        </li> -->
