@@ -20,7 +20,7 @@
 
   <body style="font-family: 'Lexend'">
     <!-- Navbar -->
-    <header class="bg-[#F9F7F3]">
+    <header class="bg-[#F9F7F3] sticky top-0">
       <div class="mx-auto pt-5 pb-12 container flex justify-between">
         <div class="">
           <a href="blog.html"
@@ -66,7 +66,10 @@
           <img src="assets/noakhali.png" alt="" />
           <div>
             <button class="btn text-lg font-semibold">
-              <img src="assets/coin.png" alt="" /><span id="noakhali-got">0</span> BDT
+              <img src="assets/coin.png" alt="" /><span id="noakhali-got"
+                >0</span
+              >
+              BDT
             </button>
             <h3 class="font-bold text-lg my-5">
               Donate for Flood at Noakhali, Bangladesh
@@ -99,7 +102,8 @@
           <img src="assets/feni.png" alt="" />
           <div>
             <button class="btn text-lg font-semibold">
-              <img src="assets/coin.png" alt="" /><span id="feni-got">600</span> BDT
+              <img src="assets/coin.png" alt="" /><span id="feni-got">600</span>
+              BDT
             </button>
             <h3 class="font-bold text-lg my-5">
               Donate for Flood Relief in Feni, Bangladesh
@@ -131,7 +135,10 @@
           <img src="assets/quota-protest.png" alt="" />
           <div>
             <button class="btn text-lg font-semibold">
-              <img src="assets/coin.png" alt="" /><span id="quota-got">2400</span> BDT
+              <img src="assets/coin.png" alt="" /><span id="quota-got"
+                >2400</span
+              >
+              BDT
             </button>
             <h3 class="font-bold text-lg my-5">
               Aid for Injured in the Quota Movement
@@ -165,6 +172,17 @@
     </main>
 
     <footer class="bg-[#F9F7F3] h-24"></footer>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box text-center">
+        <h3 class="text-3xl font-bold">Congrats!</h3>
+        <img src="assets/coin.png" alt="" class="mx-auto my-5 w-[50px]" />
+        <p class="py-4">You have donated for Humankind</p>
+        <h3 class="font-bold text-2xl mb-5">Successfully</h3>
+        <form method="dialog">
+          <button class="btn">Close Confirmation</button>
+        </form>
+      </div>
+    </dialog>
     <script src="js/utilities.js"></script>
     <script src="js/home.js"></script>
   </body>

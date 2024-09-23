@@ -10,11 +10,11 @@ const noakhaliGot = document.getElementById("noakhali-got");
 const feniGot = document.getElementById("feni-got");
 const quotaGot = document.getElementById("quota-got");
 const totalAmount = document.getElementById("total-amount");
-const ul = document.getElementById('history-part');
+const ul = document.getElementById("history-part");
 
-const str1 = 'is Donated for Flood at Noakhali, Bangladesh';
-const str2 = 'is Donated for Flood Relief in Feni, Bangladesh';
-const str3 = 'is Donated for Aid for Injured in the Quota Movement';
+const str1 = "is Donated for Flood at Noakhali, Bangladesh";
+const str2 = "is Donated for Flood Relief in Feni, Bangladesh";
+const str3 = "is Donated for Aid for Injured in the Quota Movement";
 
 // const item = <li class="border-2 rounded-lg px-6 py-4"></li>;
 
@@ -38,16 +38,16 @@ donationButton.addEventListener("click", function () {
 
 noakhaliSubmit.addEventListener("click", function () {
   const taka = amountGiven("noakhali-amount");
-  if (isNaN(taka) === true || taka < 0) {
+  const prevTotal = parseFloat(totalAmount.innerText);
+  if (isNaN(taka) === true || taka < 0 || taka > prevTotal) {
     alert("Invalid Input");
   } else {
     const prevTaka = parseFloat(noakhaliGot.innerText);
     noakhaliGot.innerText = prevTaka + taka;
-    const prevTotal = parseFloat(totalAmount.innerText);
     totalAmount.innerText = prevTotal - taka;
 
     const date = new Date();
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.innerHTML = `
     <li class="border-2 rounded-lg px-6 py-4 mb-6">
         <p class="font-bold mb-3">${taka} Taka ${str1}</p>
@@ -55,47 +55,50 @@ noakhaliSubmit.addEventListener("click", function () {
     </li>
     `;
     ul.appendChild(li);
+    my_modal_5.showModal();
   }
 });
 feniSubmit.addEventListener("click", function () {
   const taka = amountGiven("feni-amount");
-  if (isNaN(taka) === true || taka < 0) {
+  const prevTotal = parseFloat(totalAmount.innerText);
+  if (isNaN(taka) === true || taka < 0 || taka > prevTotal) {
     alert("Invalid Input");
   } else {
     const prevTaka = parseFloat(feniGot.innerText);
     feniGot.innerText = prevTaka + taka;
-    const prevTotal = parseFloat(totalAmount.innerText);
     totalAmount.innerText = prevTotal - taka;
 
     const date = new Date();
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.innerHTML = `
     <li class="border-2 rounded-lg px-6 py-4 mb-6">
-        <p class="font-bold mb-3">${taka} Taka ${str1}</p>
+        <p class="font-bold mb-3">${taka} Taka ${str2}</p>
         <p class="font-light">Date: ${date}</p>
     </li>
     `;
     ul.appendChild(li);
+    my_modal_5.showModal();
   }
 });
 quotaSubmit.addEventListener("click", function () {
   const taka = amountGiven("quota-amount");
-  if (isNaN(taka) === true || taka < 0) {
+  const prevTotal = parseFloat(totalAmount.innerText);
+  if (isNaN(taka) === true || taka < 0 || taka > prevTotal) {
     alert("Invalid Input");
   } else {
     const prevTaka = parseFloat(quotaGot.innerText);
     quotaGot.innerText = prevTaka + taka;
-    const prevTotal = parseFloat(totalAmount.innerText);
     totalAmount.innerText = prevTotal - taka;
 
     const date = new Date();
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.innerHTML = `
     <li class="border-2 rounded-lg px-6 py-4 mb-6">
-        <p class="font-bold mb-3">${taka} Taka ${str1}</p>
+        <p class="font-bold mb-3">${taka} Taka ${str3}</p>
         <p class="font-light">Date: ${date}</p>
     </li>
     `;
     ul.appendChild(li);
+    my_modal_5.showModal();
   }
 });
