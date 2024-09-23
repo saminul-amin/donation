@@ -10,6 +10,13 @@ const noakhaliGot = document.getElementById("noakhali-got");
 const feniGot = document.getElementById("feni-got");
 const quotaGot = document.getElementById("quota-got");
 const totalAmount = document.getElementById("total-amount");
+const ul = document.getElementById('history-part');
+
+const str1 = 'is Donated for Flood at Noakhali, Bangladesh';
+const str2 = 'is Donated for Flood Relief in Feni, Bangladesh';
+const str3 = 'is Donated for Aid for Injured in the Quota Movement';
+
+// const item = <li class="border-2 rounded-lg px-6 py-4"></li>;
 
 donationButton.addEventListener(
   "click",
@@ -38,6 +45,16 @@ noakhaliSubmit.addEventListener("click", function () {
     noakhaliGot.innerText = prevTaka + taka;
     const prevTotal = parseFloat(totalAmount.innerText);
     totalAmount.innerText = prevTotal - taka;
+
+    const date = new Date();
+    const li = document.createElement('li');
+    li.innerHTML = `
+    <li class="border-2 rounded-lg px-6 py-4 mb-6">
+        <p class="font-bold mb-3">${taka} Taka ${str1}</p>
+        <p class="font-light">Date: ${date}</p>
+    </li>
+    `;
+    ul.appendChild(li);
   }
 });
 feniSubmit.addEventListener("click", function () {
@@ -49,6 +66,16 @@ feniSubmit.addEventListener("click", function () {
     feniGot.innerText = prevTaka + taka;
     const prevTotal = parseFloat(totalAmount.innerText);
     totalAmount.innerText = prevTotal - taka;
+
+    const date = new Date();
+    const li = document.createElement('li');
+    li.innerHTML = `
+    <li class="border-2 rounded-lg px-6 py-4 mb-6">
+        <p class="font-bold mb-3">${taka} Taka ${str1}</p>
+        <p class="font-light">Date: ${date}</p>
+    </li>
+    `;
+    ul.appendChild(li);
   }
 });
 quotaSubmit.addEventListener("click", function () {
@@ -60,5 +87,15 @@ quotaSubmit.addEventListener("click", function () {
     quotaGot.innerText = prevTaka + taka;
     const prevTotal = parseFloat(totalAmount.innerText);
     totalAmount.innerText = prevTotal - taka;
+
+    const date = new Date();
+    const li = document.createElement('li');
+    li.innerHTML = `
+    <li class="border-2 rounded-lg px-6 py-4 mb-6">
+        <p class="font-bold mb-3">${taka} Taka ${str1}</p>
+        <p class="font-light">Date: ${date}</p>
+    </li>
+    `;
+    ul.appendChild(li);
   }
 });
